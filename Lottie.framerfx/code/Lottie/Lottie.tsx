@@ -64,7 +64,7 @@ export class Lottie extends React.Component<Partial<Props>> {
         lottieJsonURL: lottieJsonURL,
         loop: true,
         refresh: LottiePlayStates.Play,
-        // Added so Lottie doesn't complain about props in render()
+        // Added three props below so Lottie doesn't complain about props in render()
         options: {},
         isStopped: false,
         isPaused: false,
