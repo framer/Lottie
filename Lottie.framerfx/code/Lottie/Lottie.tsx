@@ -25,7 +25,8 @@ const style: React.CSSProperties = {
     overflow: "hidden",
 }
 
-const lottiePlaceholder = "https://static.framer.com/lottie/component.png"
+const lottiePlaceholder =
+    "https://raw.githubusercontent.com/framer/Lottie/master/Lottie.framerfx/assets/component.png"
 const lottieJsonURL =
     "https://raw.githubusercontent.com/framer/Lottie/master/Lottie.framerfx/assets/logo.json"
 
@@ -63,7 +64,7 @@ export class Lottie extends React.Component<Partial<Props>> {
         lottieJsonURL: lottieJsonURL,
         loop: true,
         refresh: LottiePlayStates.Play,
-        // Added so Lottie doesn't complain about props in render
+        // Added so Lottie doesn't complain about props in render()
         options: {},
         isStopped: false,
         isPaused: false,
@@ -159,9 +160,8 @@ export class Lottie extends React.Component<Partial<Props>> {
         if (error) {
             return (
                 <div style={styleError}>
-                    {
-                        "Error loading URL, please check console in the bottom right-hand corner to debug"
-                    }
+                    Error loading URL, please check the URL is a valid Lottie
+                    JSON URL
                 </div>
             )
         }
