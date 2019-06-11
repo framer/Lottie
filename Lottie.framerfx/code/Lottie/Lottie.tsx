@@ -25,10 +25,9 @@ const style: React.CSSProperties = {
     overflow: "hidden",
 }
 
-const lottiePlaceholder = "https://static.framer.com/lottie/placeholder.png"
-// const lottieJsonURL = "https://static.framer.com/json/lottie/logo.json"
+const lottiePlaceholder = "https://static.framer.com/lottie/component.png"
 const lottieJsonURL =
-    "https://raw.githubusercontent.com/airbnb/lottie-ios/ls/bump-version/Example/Tests/LottieLogo1.json"
+    "https://raw.githubusercontent.com/framer/Lottie/master/Lottie.framerfx/assets/logo.json"
 
 export const enum LottiePlayStates {
     Play = "▶",

@@ -15,7 +15,7 @@
         "codeComponentIdentifier" : ".\/Lottie\/Lottie.tsx_Lottie",
         "codeComponentProps" : {
           "loop" : true,
-          "lottieJsonURL" : "https:\/\/raw.githubusercontent.com\/airbnb\/lottie-ios\/ls\/bump-version\/Example\/Tests\/LottieLogo1.json",
+          "lottieJsonURL" : "https:\/\/raw.githubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json",
           "refresh" : "▶"
         },
         "codeOverrideEnabled" : false,
