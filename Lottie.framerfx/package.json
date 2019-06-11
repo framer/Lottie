@@ -1,0 +1,18 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "d8c71a2a-3ca6-406f-9b39-44a6f08b2580"
+	},
+	"author": "Jordan Dobson",
+	"dependencies": {
+		"react-lottie": "^1.2.3"
+	}
+}
