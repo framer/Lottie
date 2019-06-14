@@ -12,7 +12,7 @@
 
         ],
         "clip" : true,
-        "codeComponentIdentifier" : ".\/Lottie\/Lottie.tsx_Lottie",
+        "codeComponentIdentifier" : ".\/Lottie.tsx_Lottie",
         "codeComponentProps" : {
           "loop" : true,
           "lottieJsonURL" : "https:\/\/raw.githubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json",
@@ -50,7 +50,7 @@
         "fillType" : "color",
         "height" : 200,
         "heightType" : 0,
-        "id" : "sGGbmyMdM",
+        "id" : "ELXoTA2ZK",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
         "left" : 0,
