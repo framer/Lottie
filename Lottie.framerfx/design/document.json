@@ -15,7 +15,7 @@
         "codeComponentIdentifier" : ".\/Lottie\/Lottie.tsx_Lottie",
         "codeComponentProps" : {
           "loop" : true,
-          "lottieJsonURL" : "https:\/\/raw.gitshubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json",
+          "lottieJsonURL" : "https:\/\/raw.githubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json",
           "refresh" : "▶"
         },
         "codeOverrideEnabled" : false,

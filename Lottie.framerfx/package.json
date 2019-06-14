@@ -9,10 +9,13 @@
 		"react": "^16.8"
 	},
 	"framer": {
-		"id": "d8c71a2a-3ca6-406f-9b39-44a6f08b2580"
+		"id": "d8c71a2a-3ca6-406f-9b39-44a6f08b2580",
+		"displayName": "Lottie"
 	},
-	"author": "Jordan Dobson",
+	"author": "Framer Team",
 	"dependencies": {
 		"react-lottie": "^1.2.3"
-	}
+	},
+	"name": "@framer/framer.lottie",
+	"version": "1.0.0"
 }
