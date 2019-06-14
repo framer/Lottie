@@ -8,6 +8,7 @@ Icon\r
 .backups
 .framer-lock
 .project.log
+.yarnrc
 yarn-error.log
 build
 dist
