@@ -14,6 +14,7 @@
 	},
 	"author": "Framer Team",
 	"dependencies": {
+		"prop-types": "^15.7.2",
 		"react-lottie": "^1.2.3"
 	},
 	"name": "@framer/framer.lottie",

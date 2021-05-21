@@ -1,6 +1,6 @@
 import * as React from "react"
-import { PropertyControls, ControlType } from "framer"
-import Lottie from "react-lottie"
+import { PropertyControls, ControlType, RenderTarget } from "framer"
+import ReactLottie from "react-lottie"
 
 const styleError: React.CSSProperties = {
     height: "100%",
@@ -36,14 +36,6 @@ export const enum LottiePlayStates {
     Stop = "■",
 }
 
-const StringIsNumber = value => isNaN(Number(value)) === false
-
-function enumToArray(enumme) {
-    return Object.keys(enumme)
-        .filter(StringIsNumber)
-        .map(key => enumme[key])
-}
-
 interface Props {
     lottieJsonURL: string
     loop: boolean
@@ -69,9 +61,16 @@ export class Lottie extends React.Component<Partial<Props>> {
         isStopped: false,
         isPaused: false,
     }
+
     static propertyControls: PropertyControls<Props> = {
-        lottieJsonURL: { type: ControlType.String, title: "JSON" },
-        loop: { type: ControlType.Boolean, title: "Loop" },
+        lottieJsonURL: {
+            type: ControlType.String,
+            title: "JSON",
+        },
+        loop: {
+            type: ControlType.Boolean,
+            title: "Loop",
+        },
         refresh: {
             type: ControlType.SegmentedEnum,
             title: "State",
@@ -82,43 +81,51 @@ export class Lottie extends React.Component<Partial<Props>> {
             ],
         },
     }
+
     state = {
         error: false,
         isStopped: false,
         isPaused: false,
         animationData: null,
     }
+
     componentDidMount() {
         this.loadLottieData(this.props)
     }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.lottieJsonURL !== this.props.lottieJsonURL) {
             this.loadLottieData(nextProps)
         }
+
         if (nextProps.refresh !== this.props.refresh) {
             this.setState({
                 isPaused: nextProps.refresh === LottiePlayStates.Pause,
                 isStopped: nextProps.refresh === LottiePlayStates.Stop,
             })
         }
+
         if (nextProps.loop !== this.props.loop) {
             // seems like an issue with react-lottie, force it to reload the animation
             this.forceReloadAnimation()
         }
     }
+
     forceReloadAnimation = () => {
         this.setState({
-            animationData: { ...this.state.animationData },
+            animationData: {
+                ...this.state.animationData,
+            },
         })
     }
-    loadLottieData = props => {
-        const { lottieJsonURL } = props
-        fetch(lottieJsonURL, {
+
+    loadLottieData = (props) => {
+        fetch(props.lottieJsonURL, {
             method: "GET",
             credentials: "omit",
             redirect: "follow",
         })
-            .then(resp => {
+            .then((resp) => {
                 if (!resp.ok) {
                     console.error(
                         "There was an error while the fetching Lottie JSON URL"
@@ -130,14 +137,15 @@ export class Lottie extends React.Component<Partial<Props>> {
                     })
                     return
                 }
+
                 resp.json()
-                    .then(data => {
+                    .then((data) => {
                         this.setState({
                             error: false,
                             animationData: data,
                         })
                     })
-                    .catch(e => {
+                    .catch((e) => {
                         console.error(e)
                         console.log(
                             "Could not parse a valid JSON from the Lottie URL"
@@ -147,7 +155,7 @@ export class Lottie extends React.Component<Partial<Props>> {
                         })
                     })
             })
-            .catch(e => {
+            .catch((e) => {
                 this.setState({
                     error: true,
                 })
@@ -157,6 +165,7 @@ export class Lottie extends React.Component<Partial<Props>> {
     render() {
         const { loop } = this.props
         const { error, animationData, isPaused, isStopped } = this.state
+
         if (error) {
             return (
                 <div style={styleError}>
@@ -165,6 +174,7 @@ export class Lottie extends React.Component<Partial<Props>> {
                 </div>
             )
         }
+
         if (!animationData) {
             return (
                 <div style={style}>
@@ -172,16 +182,21 @@ export class Lottie extends React.Component<Partial<Props>> {
                 </div>
             )
         }
+
+        const isStatic = RenderTarget.hasRestrictions()
+
         const options = {
             ...defaultOptions,
+            autoplay: !isStatic,
             animationData,
             loop,
         }
+
         return (
-            <Lottie
+            <ReactLottie
                 options={options}
-                isStopped={isStopped}
-                isPaused={isPaused}
+                isStopped={isStatic || isStopped}
+                isPaused={isStatic || isPaused}
             />
         )
     }
