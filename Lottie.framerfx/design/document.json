@@ -3,82 +3,133 @@
     "__class" : "RootNode",
     "children" : [
       {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
+        "__class" : "PageNode",
         "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "$control__loop" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__lottieJsonURL" : {
+              "type" : "string",
+              "value" : "https:\/\/raw.githubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json"
+            },
+            "$control__playOnCanvas" : {
+              "type" : "enum",
+              "value" : false
+            },
+            "$control__refresh" : {
+              "type" : "segmentedenum",
+              "value" : "▶"
+            },
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Lottie.tsx_Lottie",
+            "codeComponentPackageVersion" : null,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "heightFactor" : 0.5,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 200,
+            "heightType" : 0,
+            "id" : "ELXoTA2ZK",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : -404,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "mqZ4t01Vt-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : -361,
+            "visible" : true,
+            "width" : 200,
+            "widthType" : 0
+          }
+        ],
+        "duplicatedFrom" : null,
+        "guidesX" : [
 
         ],
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/Lottie.tsx_Lottie",
-        "codeComponentProps" : {
-          "loop" : true,
-          "lottieJsonURL" : "https:\/\/raw.githubusercontent.com\/framer\/Lottie\/master\/Lottie.framerfx\/assets\/logo.json",
-          "refresh" : "▶"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
+        "guidesY" : [
 
         ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "end" : "black",
-          "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 200,
-        "heightType" : 0,
-        "id" : "ELXoTA2ZK",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "left" : 0,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
+        "homeNodeId" : null,
+        "id" : "mqZ4t01Vt-page",
+        "name" : "Page 1",
         "originalid" : null,
         "parentid" : "mqZ4t01Vt",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 0,
-        "visible" : true,
-        "width" : 200,
-        "widthType" : 0
+        "visible" : false
       }
     ],
+    "disableBackdropFilters" : false,
+    "duplicatedFrom" : null,
     "id" : "mqZ4t01Vt",
     "name" : null,
     "originalid" : null,
     "parentid" : null,
+    "thumbnailNodeId" : null,
     "tokens" : {
 
     },
@@ -87,5 +138,5 @@
     ],
     "visible" : false
   },
-  "version" : 51
+  "version" : 78
 }
